@@ -41,6 +41,7 @@ public class LivesManagement : MonoBehaviour
                 lives2.gameObject.SetActive(false);
                 lives3.gameObject.SetActive(false);
                 UIMort.gameObject.SetActive(true);
+                Time.timeScale = 0f;
                 break;
         }
     }
