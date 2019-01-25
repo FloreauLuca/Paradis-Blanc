@@ -15,7 +15,20 @@ public class LivesManagement : MonoBehaviour
         Instance = this;
     }
 
-    public int health;
+    private int health;
+    public int Health
+    {
+        get { return health; }
+        set
+        {   if (!GameManager.Instance.Player.Invincibility)
+            {
+                StartCoroutine(GameManager.Instance.Player.InvincibilityCouroutine());
+
+                health = value;
+            }
+            
+        }
+    }
 
     void Start()
     {
