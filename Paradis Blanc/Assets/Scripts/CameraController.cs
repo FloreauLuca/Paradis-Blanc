@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +14,6 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x + (speed*Time.deltaTime), transform.position.y, -10);
+        transform.position = new Vector3(transform.position.x + (GameManager.Instance.Speed*Time.deltaTime), transform.position.y, -10);
     }
 }

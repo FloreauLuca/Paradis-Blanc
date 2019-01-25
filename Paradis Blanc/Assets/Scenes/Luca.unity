@@ -586,6 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c864f9d17bf6e34da8a4a950a3ef99d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialSpeed: 5
 --- !u!4 &316387105
 Transform:
   m_ObjectHideFlags: 0
@@ -1378,7 +1379,6 @@ MonoBehaviour:
   lives2: {fileID: 2009180437}
   lives3: {fileID: 600512018}
   UIMort: {fileID: 889909104}
-  health: 50
 --- !u!114 &780985216
 MonoBehaviour:
   m_ObjectHideFlags: 0
