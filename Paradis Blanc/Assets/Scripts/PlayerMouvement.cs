@@ -7,7 +7,7 @@ public class PlayerMouvement : MonoBehaviour
     private Rigidbody2D rigidbody2D;
 
     [SerializeField] private float speed;
-
+    [SerializeField] private float maxSpeed;
 
     [SerializeField] private float airMax; // Comme les chaussures XD
     public float AirMax => airMax;
@@ -31,6 +31,25 @@ public class PlayerMouvement : MonoBehaviour
             rigidbody2D.AddForce(Vector2.down*speed);
         }
 
+        if (Mathf.Abs(rigidbody2D.velocity.y) > maxSpeed)
+        {
+            rigidbody2D.velocity = new Vector2(0, maxSpeed * Mathf.Sign(rigidbody2D.velocity.y));
+        }
+
+        if (rigidbody2D.velocity.y > 2)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 45);
+        } else if (rigidbody2D.velocity.y < -2)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, -45);
+
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        }
+        Debug.Log(rigidbody2D.velocity.y);
         actualAir -= decreaseAir * Time.deltaTime;
         if (actualAir <= 0)
         {
@@ -41,8 +60,8 @@ public class PlayerMouvement : MonoBehaviour
     public void Die()
     {
         LivesManagement.Instance.health = 0;
-        Destroy(gameObject);
     }
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {
