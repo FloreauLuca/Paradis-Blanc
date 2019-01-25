@@ -8,8 +8,15 @@ public class LivesManagement : MonoBehaviour
     public GameObject lives1, lives2, lives3;
     [SerializeField] private GameObject UIMort;
 
-    public static int health;
-    // Start is called before the first frame update
+    // C'est un singleton, ça permet d'avoir accès à toutes les variables public sans mettre de variables en static
+    public static LivesManagement Instance { get; private set; }
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public int health;
+
     void Start()
     {
         health = 3;
@@ -19,7 +26,7 @@ public class LivesManagement : MonoBehaviour
         UIMort.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
+
     void FixedUpdate()
     {
         switch (health)
