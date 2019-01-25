@@ -178,7 +178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49754f0ecf89c7747a3f8601b7ed9821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
 --- !u!114 &1898974216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,6 +504,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_GravityScale
       value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769947781861708777, guid: 13394724ee5f1d54c8140307510173d8,
+        type: 3}
+      propertyPath: invincibilityColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769947781861708777, guid: 13394724ee5f1d54c8140307510173d8,
+        type: 3}
+      propertyPath: invincibilityColor.b
+      value: 0.13162541
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769947781861708777, guid: 13394724ee5f1d54c8140307510173d8,
+        type: 3}
+      propertyPath: invincibilityColor.a
+      value: 0.6784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769947781861708777, guid: 13394724ee5f1d54c8140307510173d8,
+        type: 3}
+      propertyPath: invincibilityTime
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1769947781861708777, guid: 13394724ee5f1d54c8140307510173d8,
         type: 3}

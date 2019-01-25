@@ -22,16 +22,14 @@ public class PlayerMouvement : MonoBehaviour
     [SerializeField] private float decreaseAir;
     private float actualAir;
     public float ActualAir => actualAir;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         actualAir = airMax;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetButton("Jump") || Input.touchCount>0)
