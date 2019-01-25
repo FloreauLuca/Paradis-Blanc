@@ -7,6 +7,18 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
+
+    [SerializeField] private float initialSpeed;
+    private float speed;
+    public float Speed
+    {
+        get { return speed; }
+        set { speed = value; }
+    }
+
+    private PlayerMouvement player;  // permet d'avoir accès au player de n'importe où
+    public PlayerMouvement Player => player;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -20,14 +32,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        
+        SetupScene();
     }
 
-    // Update is called once per frame
+    void SetupScene() // initialise le niveau
+    {
+        player = GameObject.FindObjectOfType<PlayerMouvement>();
+        speed = initialSpeed;
+    }
+
     void Update()
     {
         

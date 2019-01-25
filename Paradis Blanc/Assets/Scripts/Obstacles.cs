@@ -18,6 +18,6 @@ public class Obstacles : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        LivesManagement.health -= 1;
+       LivesManagement.Instance.Health -= 1;
     }
 }
