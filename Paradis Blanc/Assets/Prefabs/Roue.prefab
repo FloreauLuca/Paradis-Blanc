@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60984845747670967}
-  - component: {fileID: 8135942508702498015}
   m_Layer: 0
   m_Name: Roue
   m_TagString: Untagged
@@ -32,18 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8135942508702498015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2568745859657457841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9d140df0abbb30479b0f770523fee5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5575569815617145944
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,6 +42,7 @@ GameObject:
   - component: {fileID: 6735671728117298763}
   - component: {fileID: 2919797635236749310}
   - component: {fileID: 5974555253121132193}
+  - component: {fileID: 1473294287990890784}
   m_Layer: 0
   m_Name: wheel
   m_TagString: Untagged
@@ -140,3 +128,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!114 &1473294287990890784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5575569815617145944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d140df0abbb30479b0f770523fee5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
