@@ -73,9 +73,10 @@ public class PlayerMouvement : MonoBehaviour
         spriteRenderer.color = invincibilityColor;
         invincibility = true;
         GameManager.Instance.Speed /= 2;
+        yield return new WaitForSeconds(1);
+        GameManager.Instance.Speed *= 2;
         yield return new WaitForSeconds(invincibilityTime);
         invincibility = false;
-        GameManager.Instance.Speed *= 2;
         spriteRenderer.color = Color.white;
     }
 

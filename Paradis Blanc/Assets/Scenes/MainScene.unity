@@ -2331,6 +2331,7 @@ GameObject:
   - component: {fileID: 879203768}
   - component: {fileID: 879203767}
   - component: {fileID: 879203766}
+  - component: {fileID: 879203769}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -2358,7 +2359,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5bcc15332fe113f469b0fb91e47cb113, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8500100b0ef5eee49a8c2521472616bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2394,6 +2395,25 @@ RectTransform:
   m_AnchoredPosition: {x: 169, y: 163}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &879203769
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879203765}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 01394934ac1f6a84c83c23f84e78c048, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &897307377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4014,6 +4034,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6652002753582700706, guid: 631f3b3a643e1ba40ac4ce190aa925c0,
+        type: 3}
+      propertyPath: invincibilityColor.r
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652002753582700706, guid: 631f3b3a643e1ba40ac4ce190aa925c0,
+        type: 3}
+      propertyPath: invincibilityColor.g
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652002753582700706, guid: 631f3b3a643e1ba40ac4ce190aa925c0,
+        type: 3}
+      propertyPath: invincibilityColor.b
+      value: 0.735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652002753582700706, guid: 631f3b3a643e1ba40ac4ce190aa925c0,
+        type: 3}
+      propertyPath: invincibilityColor.a
+      value: 0.5176471
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 631f3b3a643e1ba40ac4ce190aa925c0, type: 3}
 --- !u!1 &1239992618
@@ -4786,6 +4826,7 @@ GameObject:
   - component: {fileID: 1422649475}
   - component: {fileID: 1422649474}
   - component: {fileID: 1422649473}
+  - component: {fileID: 1422649476}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -4813,7 +4854,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5bcc15332fe113f469b0fb91e47cb113, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8500100b0ef5eee49a8c2521472616bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4849,6 +4890,25 @@ RectTransform:
   m_AnchoredPosition: {x: 230, y: 163}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1422649476
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422649472}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 01394934ac1f6a84c83c23f84e78c048, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1443487427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5976,6 +6036,7 @@ GameObject:
   - component: {fileID: 1822976255}
   - component: {fileID: 1822976254}
   - component: {fileID: 1822976253}
+  - component: {fileID: 1822976256}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -6003,7 +6064,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5bcc15332fe113f469b0fb91e47cb113, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8500100b0ef5eee49a8c2521472616bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6039,6 +6100,25 @@ RectTransform:
   m_AnchoredPosition: {x: 290, y: 163}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1822976256
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822976252}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 01394934ac1f6a84c83c23f84e78c048, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1832212657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4324543000356915212, guid: 0060fc8ffae266d479b8f93bdde68ec0,
