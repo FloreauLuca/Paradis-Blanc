@@ -16,7 +16,7 @@ public class PlayerMouvement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
 
-    [SerializeField] private float airMax; // Comme les chaussures XD
+    [SerializeField] private float airMax; // Comme les chaussures XD   réponse: t'es sérieux ? XD
     public float AirMax => airMax;
     
     [SerializeField] private float decreaseAir;
