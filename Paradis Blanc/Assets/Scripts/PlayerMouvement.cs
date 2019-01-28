@@ -18,6 +18,7 @@ public class PlayerMouvement : MonoBehaviour
 
     [SerializeField] private float airMax; // Comme les chaussures XD   réponse: t'es sérieux ? XD
     public float AirMax => airMax;
+    private AudioSource breathSound;
     
     [SerializeField] private float decreaseAir;
     private float actualAir;
@@ -28,6 +29,7 @@ public class PlayerMouvement : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         actualAir = airMax;
+        breathSound=GetComponent<AudioSource>();
     }
     
     void Update()
@@ -84,14 +86,9 @@ public class PlayerMouvement : MonoBehaviour
         if (other.gameObject.CompareTag("Surface"))
         {
             actualAir = airMax;
+            Debug.Log("fkjsd");
+            breathSound.Play();     
         }
-    }
-
-    private void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Surface"))
-        {
-            actualAir = airMax;
-        }
+        
     }
 }
