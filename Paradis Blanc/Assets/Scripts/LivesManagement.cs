@@ -20,13 +20,9 @@ public class LivesManagement : MonoBehaviour
     {
         get { return health; }
         set
-        {   if (!GameManager.Instance.Player.Invincibility)
-            {
+        {
                 StartCoroutine(GameManager.Instance.Player.InvincibilityCouroutine());
-
                 health = value;
-            }
-            
         }
     }
 
@@ -50,16 +46,19 @@ public class LivesManagement : MonoBehaviour
                 lives3.gameObject.SetActive(true);
                 break;
             case 2:
-                lives1.gameObject.SetActive(false);
+                //lives1.gameObject.SetActive(false);
+                lives1.GetComponent<Animator>().SetTrigger("Break");
                 break;
             case 1:
                 lives1.gameObject.SetActive(false);
-                lives2.gameObject.SetActive(false);
+                lives2.GetComponent<Animator>().SetTrigger("Break");
+                //lives2.gameObject.SetActive(false);
                 break;
             case 0:
                 lives1.gameObject.SetActive(false);
                 lives2.gameObject.SetActive(false);
-                lives3.gameObject.SetActive(false);
+                lives3.GetComponent<Animator>().SetTrigger("Break");
+                //lives3.gameObject.SetActive(false);
                 UIMort.gameObject.SetActive(true);
                 Time.timeScale = 0f;
                 break;

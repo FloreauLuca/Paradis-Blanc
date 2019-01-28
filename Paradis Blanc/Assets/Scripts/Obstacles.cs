@@ -23,14 +23,17 @@ public class Obstacles : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-       LivesManagement.Instance.Health -= 1;
-        if (col.gameObject.tag == "Metal")
+        if (!GameManager.Instance.Player.Invincibility)
         {
-            MetalSound.Play();
-        }
-        else
-        {
-            PlasticSound.Play();
+            LivesManagement.Instance.Health -= 1;
+            if (col.gameObject.tag == "Metal")
+            {
+                MetalSound.Play();
+            }
+            else
+            {
+                PlasticSound.Play();
+            }
         }
     }
 }
