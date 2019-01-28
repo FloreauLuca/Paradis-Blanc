@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,6 +32,25 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnLevelFinishedLoadingScene;
+    }
+
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnLevelFinishedLoadingScene;
+    }
+
+    //this function is activated every time a scene is loaded
+    private void OnLevelFinishedLoadingScene(Scene scene, LoadSceneMode mode)
+    {
+        SetupScene();
+        Debug.Log("Scene Loaded");
+    }
+
 
     void Start()
     {
