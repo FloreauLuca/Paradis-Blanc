@@ -23,6 +23,7 @@ public class LivesManagement : MonoBehaviour
         {
                 StartCoroutine(GameManager.Instance.Player.InvincibilityCouroutine());
                 health = value;
+                DisplayUpdate();
         }
     }
 
@@ -38,6 +39,11 @@ public class LivesManagement : MonoBehaviour
 
     void FixedUpdate()
     {
+    }
+
+    void DisplayUpdate()
+    {
+
         switch (health)
         {
             case 3:
@@ -58,7 +64,7 @@ public class LivesManagement : MonoBehaviour
                 lives1.gameObject.SetActive(false);
                 lives2.gameObject.SetActive(false);
                 lives3.GetComponent<Animator>().SetTrigger("Break");
-                //lives3.gameObject.SetActive(false);
+                lives3.gameObject.SetActive(false);
                 UIMort.gameObject.SetActive(true);
                 Time.timeScale = 0f;
                 break;
