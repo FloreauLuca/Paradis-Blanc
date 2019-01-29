@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Slider airSlider;
 
     [SerializeField] private GameObject postprocessGameObject;
+    [SerializeField] private GameObject endPanel;
+    
 
     [SerializeField] private float pourcentageBloomActivation; // pourcentage à partir dulequel le bloom s'active
 
@@ -31,5 +33,12 @@ public class UIManager : MonoBehaviour
         {
             postprocessGameObject.SetActive(false);
         }
+
+        if (GameManager.Instance.end)
+        {
+            endPanel.SetActive(true);
+        }
     }
+    
+    
 }

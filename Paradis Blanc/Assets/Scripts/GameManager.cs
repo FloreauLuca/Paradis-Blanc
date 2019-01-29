@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
+    public bool end;
 
     [SerializeField] private float initialSpeed;
     private float speed;
@@ -61,10 +62,13 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.FindObjectOfType<PlayerMouvement>();
         speed = initialSpeed;
+        Time.timeScale = 1;
+        end = false;
     }
 
-    void Update()
+    public void End()
     {
-        
+        Time.timeScale = 0;
+        end = true;
     }
 }
