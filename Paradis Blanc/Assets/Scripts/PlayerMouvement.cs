@@ -55,8 +55,14 @@ public class PlayerMouvement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 0);
 
         }
-
-        actualAir -= decreaseAir * Time.deltaTime;
+        if (actualAir <= 25f/100 * airMax )
+        {
+            actualAir -= decreaseAir * Time.deltaTime/2;
+        }
+        else
+        {
+            actualAir -= decreaseAir * Time.deltaTime;
+        }
         if (actualAir <= 0)
         {
             Die();
