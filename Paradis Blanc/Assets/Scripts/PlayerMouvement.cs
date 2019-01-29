@@ -22,11 +22,15 @@ public class PlayerMouvement : MonoBehaviour
     [SerializeField] private float decreaseAir;
     private float actualAir;
     public float ActualAir => actualAir;
+
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip breath;
     
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         actualAir = airMax;
     }
     
@@ -91,6 +95,7 @@ public class PlayerMouvement : MonoBehaviour
         if (other.gameObject.CompareTag("Surface"))
         {
             actualAir = airMax;
+            audioSource.PlayOneShot(breath);
         }
     }
 

@@ -9,7 +9,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Slider airSlider;
 
     [SerializeField] private GameObject postprocessGameObject;
+    [SerializeField] private GameObject warning;
+
     [SerializeField] private GameObject endPanel;
+
+    private AudioSource audioSource;
     
 
     [SerializeField] private float pourcentageBloomActivation; // pourcentage à partir dulequel le bloom s'active
@@ -19,6 +23,7 @@ public class UIManager : MonoBehaviour
     {
         airSlider.maxValue = GameManager.Instance.Player.AirMax;
         airSlider.value = GameManager.Instance.Player.ActualAir;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,15 +33,29 @@ public class UIManager : MonoBehaviour
         if (GameManager.Instance.Player.ActualAir <= GameManager.Instance.Player.AirMax * (pourcentageBloomActivation/100))
         {
             postprocessGameObject.SetActive(true);
+            warning.SetActive(true);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+            
         }
         else
         {
             postprocessGameObject.SetActive(false);
+            warning.SetActive(false);
+            audioSource.Stop();
         }
 
         if (GameManager.Instance.end)
         {
             endPanel.SetActive(true);
+            audioSource.Stop();
+        }
+
+        if (LivesManagement.Instance.Health <= 0)
+        {
+            audioSource.Stop();
         }
     }
     
